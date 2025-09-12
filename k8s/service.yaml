@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: lbgcalc
+  labels:
+    app: lbgcalc
+spec:
+  ports:
+    - port: 80
+      targetPort: 80
+  selector:
+    app: lbgcalc
+    tier: lbgcalc
+  type: LoadBalancer
